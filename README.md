@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# Customized material-ui calendar picker reactjs
+This project is based on ReactJS framework (TypeScript + JavaScript) and extensively customizes the material-ui calendar picker (https://material-ui-pickers.dev/) to suit different needs.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Calendar demo gif](https://github.com/bij-ace/customized-material-ui-calendar-picker/blob/main/Customized%20material-ui%20calendar%20picker.gif)
 
-## Available Scripts
+## Available features
+- Date range selector
+- Add different indices to different days
+- Disable past dates and enable future dates upto desired date
+- Dynamic width
+- Dynamic height (height changes according to number of weeks in a month) with animation
 
-In the project directory, you can run:
+## Usage
+```react.js
+<CalendarPicker
+  /** callback function to set first selected date **/
+  setFirstSelectedDate={setFirstSelectedDate}
+  /** callback function to set last selected date **/
+  setLastSelectedDate={setLastSelectedDate}
+  /** data that shows different indices in the calendar days **/
+  calendarData={[
+    {
+      availability: "blackout", // shows blackout index
+      date: "01/05/2022",
+      index: ["Available"]
+    },
+    {
+      availability: "",
+      date: "01/06/2022",
+      index: ["Available", "Limited"]
+    },
+    {
+      availability: "",
+      date: "01/07/2022",
+      index: ["Available"]
+    },
+    {
+      availability: "",
+      date: "01/08/2022",
+      index: ["Unavailable"] // day will not be selectable
+    },
+    {
+      availability: "",
+      date: "01/09/2022",
+      index: ["Unavailable"]
+    }
+  ]}
+  /** date that can be viewed in past **/
+  minDt={new Date("01/01/2021")}
+  /** maximum date that can be selected in future **/
+  maxDt={new Date("01/01/2023")}
+  /** indices to be shown in the Legend box **/
+  indices={[
+    {
+      color: "red",
+      legend: "Unavailable"
+    },
+    {
+      color: "green",
+      legend: "Available"
+    },
+    {
+      color: "yellow",
+      legend: "Limited"
+    },
+    {
+      color: "grey",
+      legend: "Past Dates"
+    }
+  ]}
+  /** Blackout Dates text to be shown in the Legend box **/
+  showBlackoutLegend={true}
+/>
+```
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Comments
+Feel free to play around with the code and make modifications as per your need.
