@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Customized calendar",
+  "name": "Customized material-ui calendar picker",
   "icons": [
     {
       "src": "favicon.ico",
