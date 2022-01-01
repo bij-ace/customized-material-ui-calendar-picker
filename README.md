@@ -1,4 +1,4 @@
-# Customized material-ui calendar picker reactjs
+# Customized material-ui calendar date range picker reactjs
 This project is based on ReactJS framework (TypeScript + JavaScript) and extensively customizes the material-ui calendar picker (https://material-ui-pickers.dev/) to suit different needs.
 
 ![Calendar demo gif](https://github.com/bij-ace/customized-material-ui-calendar-picker/blob/main/Customized%20material-ui%20calendar%20picker.gif)
