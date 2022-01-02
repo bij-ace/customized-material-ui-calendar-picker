@@ -7,7 +7,7 @@ This project is based on ReactJS framework (TypeScript + JavaScript) and extensi
 - Date range selector
 - Add different indices to different days
 - Disable past dates and enable future dates upto desired date
-- Disable unwanted dates
+- Disable click on unwanted dates
 - Dynamic width
 - Dynamic height (height changes according to number of weeks in a month) with animation
 
